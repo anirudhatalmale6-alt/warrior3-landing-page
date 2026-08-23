@@ -211,20 +211,20 @@ body {
   margin-bottom: 0;
 }
 
-/* the underline that appears on hover */
-.card h3:hover,
-.card h3 a:hover {
+/* The ad titles stay underlined all the time.
+   Listed twice so it works whether the title has a link on it
+   or is just plain text.                                      */
+.card h3,
+.card h3 a {
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 6px;
 }
 
-/* the ad titles are links. This keeps them looking like plain
-   white headings instead of blue underlined links, so the only
-   underline a visitor sees is the one on hover.               */
+/* keeps the linked titles white like the headings they are,
+   rather than the usual link blue                             */
 .card h3 a {
   color: inherit;
-  text-decoration: none;
 }
 
 /* The slow green shine that drifts across each box.
@@ -258,6 +258,15 @@ body {
 @keyframes diamondShine {
     from { background-position: 150% 0; }
     to   { background-position: -50% 0; }
+}
+
+/* Breathing room inside each ad box.
+   First number is the space above and below the text, second is
+   the space left and right. Raise the first number to open the
+   boxes up further, lower it to tighten them.
+   It was 4px above and below before.                           */
+.cards .card {
+  padding: 16px 7px;
 }
 
 /* A lone box on the final row gets centred rather than stranded */
