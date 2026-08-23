@@ -1,0 +1,46 @@
+ICONS FOR YOUR TEXT ADS
+
+Copy the icon you want (just the symbol) and paste it in front of your
+heading, exactly where the rocket sits now. For example:
+
+    <h3>💰 Your Heading Here</h3>
+
+----------------------------------------------
+
+💰   Money bag
+💵   Dollar note
+💸   Cash flying
+🤑   Money face
+🪙   Coin
+💎   Diamond
+💳   Card
+🏦   Bank
+📈   Chart up
+📊   Bar chart
+🏆   Trophy
+🥇   Gold medal
+🚀   Rocket
+⚡   Lightning
+🔥   Fire
+💥   Boom
+🎯   Target
+📢   Loudspeaker
+📣   Megaphone
+🔔   Bell
+🌐   Globe
+👥   Visitors
+👀   Views
+🖱   Clicks
+🔗   Link
+📬   Mailbox
+✉   Email
+🚦   Traffic light
+🚃   Train
+🚗   Car
+⏰   Clock
+✅   Tick
+
+----------------------------------------------
+
+The two already on your page are the rocket and the dollar note.
+Keep the space between the icon and the first word.
