@@ -197,6 +197,18 @@ body {
      underline below only appears when the visitor is actually
      over the text - not over the empty space beside it        */
   width: fit-content;
+
+  /* the gap between the title and the description underneath.
+     Make this number smaller to tighten it up, bigger to open
+     it out. It was 22px before.                               */
+  margin-bottom: 6px;
+}
+
+/* keeps the description tight to the title whether you write it
+   as plain text or wrap it in <p> tags                         */
+.card p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /* the underline that appears on hover */
@@ -352,6 +364,7 @@ body {
     <!-- Ad 1 -->
     <div class="card diamond-line2">
       <h3><a href="https://clk247.com/the-click-generator-2" target="_blank" rel="noopener">🖱 The Click Generator</a></h3>
+      This is a test to check the distance between the title and the description.
     </div>
     <!-- ---------------- COPY TO HERE ---------------- -->
 
