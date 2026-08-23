@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+<!-- ============================================================
+     CHANGE YOUR PAGE TITLE HERE (this shows in the browser tab)
+     ============================================================ -->
+<title>Your Page Title Here</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* ============================================================
+   THE BACKGROUND - identical to the original page.
+   The glow size is locked in pixels so it looks exactly the
+   same no matter how many ad boxes you add further down.
+   ============================================================ */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  min-height: 100vh;
+
+  background:
+    radial-gradient(circle at top, rgba(132,255,0,.22), transparent 682px),
+    linear-gradient(180deg, #020202 0, #080808 829px, #000 1843px);
+  background-repeat: no-repeat;
+  background-color: #000;
+}
+
+.page {
+  max-width: 1180px;
+  margin: auto;
+  padding: 26px 18px 50px;
+}
+
+
+/* ============================================================
+   THE BANNER BOX - this was the "Create Your Account" box.
+   Same dark gradient inside, same green border, same green
+   glow around it. Emptied out and widened to the full page so
+   a large banner has room to breathe.
+   ============================================================ */
+.banner-card {
+  background: linear-gradient(180deg, #111, #050505);
+  border: 1px solid #99D84C;
+  border-radius: 20px;
+  padding: 26px;
+  box-shadow: 0 0 35px rgba(126,255,0,.35);
+  position: relative;
+  overflow: hidden;
+  margin-top: 25px;
+
+  /* Holds the box open at a decent size while it is still
+     empty. Once your banner is in, the box grows to fit it. */
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Whatever banner you drop in will shrink to fit small screens */
+.banner-card img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* OPTIONAL - the diagonal "BOARDING PASS" corner sticker that
+   was on the original box. To switch it back on, delete the
+   comment marker on the line above the rule and the one below it.
+
+.banner-card:before {
+  content: "BOARDING PASS";
+  position: absolute;
+  top: 20px;
+  right: -42px;
+  transform: rotate(35deg);
+  background: #64cd00;
+  color: #000;
+  font-weight: bold;
+  padding: 7px 50px;
+  font-size: 12px;
+}
+
+   end of the optional sticker */
+
+
+/* ============================================================
+   THE TEXT AD BOXES
+   Two per row. Add as many as you like and they flow onto new
+   rows on their own. If you end up with an odd number, the
+   last one centres itself instead of sitting off to one side.
+   ============================================================ */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 38px;
+}
+
+.card {
+  background: #101010;
+  border: 1px solid #222;border: 2px solid #3a3a3a;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: inset 0 0 18px rgba(255,255,255,.04);
+}
+
+.card h3 {
+  color: #ffffff;
+  margin-top: 0;
+  font-size: 22px;letter-spacing:2px;
+}
+
+/* The slow green shine that drifts across each box.
+   (Matches the original exactly - one moving layer.)          */
+.diamond-line2 {
+    display: inline-block;
+    padding: 4px 7px;
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+          90deg,
+          #111 0%,
+          #1a1a1a 20%,
+          #2c2c2c 36%,
+          #245224 44%,
+          #1d6b1d 50%,
+          #245224 56%,
+          #2c2c2c 64%,
+          #1a1a1a 80%,
+          #111 100%
+        ) 0 0 / 250% 100% no-repeat;
+
+    /* The dark base the shine drifts over. Must stay after the
+       line above, because that one resets the colour.          */
+    background-color: #060606;
+
+    animation: diamondShine 11s linear infinite;
+}
+
+@keyframes diamondShine {
+    from { background-position: 150% 0; }
+    to   { background-position: -50% 0; }
+}
+
+/* A lone box on the final row gets centred rather than stranded */
+.cards .card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  width: calc(50% - 9px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* ============================================================
+   PHONES AND SMALL SCREENS
+   ============================================================ */
+@media(max-width: 650px) {
+  body {
+    background: #020202;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* on a single column there is nothing to centre */
+  .cards .card:last-child:nth-child(odd) {
+    grid-column: auto;
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .banner-card {
+    min-height: 180px;
+    padding: 16px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+  <!-- ============================================================
+       YOUR LARGE BANNER GOES IN HERE.
+       Replace this comment with your banner, for example:
+
+           <a href="https://your-link-here.com">
+             <img src="my-banner.jpg" alt="">
+           </a>
+
+       ============================================================ -->
+  <div class="banner-card" id="banner">
+  </div>
+
+
+  <!-- ============================================================
+       YOUR TEXT ADS.
+       To add another ad box, copy everything between
+       "COPY FROM HERE" and "COPY TO HERE" below, then paste it
+       in just above the closing </div> of this cards block.
+       ============================================================ -->
+  <div class="cards">
+
+    <!-- ---------------- COPY FROM HERE ---------------- -->
+    <div class="card diamond-line2">
+      <h3>🚀 Get Automated Blaster</h3>
+      <p>
+        Put your ads and that's it! The system will send them to a different site everyday for a week and then starts over again = alot of traffic!
+      </p>
+    </div>
+    <!-- ---------------- COPY TO HERE ---------------- -->
+
+    <div class="card diamond-line2">
+      <h3>💵 Get Huge Payouts</h3>
+      <p>
+        More visitors mean more signups and more signups to your websites. PLUS make $100 sales with Profits Express too - Expect it to be easy!
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
