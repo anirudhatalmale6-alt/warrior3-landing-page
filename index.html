@@ -52,12 +52,68 @@ body {
   align-items: center;
 }
 
-/* Your text on the left. Plain and readable - tell me if you
-   want it styled up and I'll do it.                          */
+/* ------------------------------------------------------------
+   Your text on the left, styled the way the original page was.
+   You get four pieces to build with:
+
+     <h1>            the big yellow headline
+     <span class="green">   green words inside the headline
+     <p class="subhead">    the grey line under the headline
+     <div class="bullets">  the strips with the green left edge
+
+   There is a ready-made example further down the page, inside
+   the YOUR TEXT GOES IN HERE block. Just uncomment it.
+   ------------------------------------------------------------ */
 .hero-text {
   font-size: 18px;
   line-height: 1.5;
   color: #fff;
+}
+
+.hero-text h1 {
+  margin: 5px 0 18px;
+  color: #ffd000;
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.hero-text .green {
+  color: #64cd00;
+}
+
+.hero-text .subhead {
+  color: #ddd;
+  font-size: 21px;
+  line-height: 1.45;
+  margin-bottom: 24px;
+}
+
+.hero-text .bullets {
+  margin: 20px 0;
+}
+
+.hero-text .bullets div {
+  background: rgba(255,255,255,.05);
+  border-left: 4px solid #64cd00;
+  margin-bottom: 10px;
+  padding: 11px 13px;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+/* the white tick - put <span class="checkmark"></span> at the
+   start of a bullet to show one                               */
+.hero-text .checkmark {
+  display: inline-block;
+  width: 18px;
+  height: 10px;
+  border-left: 4px solid #fff;
+  border-bottom: 4px solid #fff;
+  transform: rotate(-45deg);
+  margin-right: 12px;
+  margin-bottom: 4px;
 }
 
 
@@ -92,12 +148,12 @@ body {
   margin: 0 auto;
 }
 
-/* OPTIONAL - the diagonal "BOARDING PASS" corner sticker that
-   was on the original box. To switch it back on, delete the
-   comment marker on the line above the rule and the one below it.
-
+/* The diagonal corner sticker on the banner box.
+   To change the wording, edit the text in quotes below.
+   To hide it completely, change display:block to display:none. */
 .banner-card:before {
-  content: "BOARDING PASS";
+  content: "OVERALL PICK";
+  display: block;
   position: absolute;
   top: 20px;
   right: -42px;
@@ -107,9 +163,8 @@ body {
   font-weight: bold;
   padding: 7px 50px;
   font-size: 12px;
+  z-index: 2;
 }
-
-   end of the optional sticker */
 
 
 /* ============================================================
@@ -222,13 +277,31 @@ body {
 
     <!-- ============================================================
          YOUR TEXT GOES IN HERE (the left hand side).
-         Replace this comment with whatever you want, for example:
 
-             <h1>Your headline</h1>
-             <p>Your paragraph of text.</p>
+         Below is a ready-made example. It is switched off at the
+         moment so it does not appear on your live page.
 
+         To switch it on, delete the two short marker lines that
+         wrap it - one sits just above the headline, the other
+         just below the last bullet. Then change the words.
+
+         (Or just send me your wording and I'll drop it in for you.)
          ============================================================ -->
     <div class="hero-text">
+
+      <!--
+      <h1>Your Headline Here <span class="green">In Green</span></h1>
+
+      <p class="subhead">Your one line of supporting text goes here.</p>
+
+      <div class="bullets">
+        <div>Your first point - this one has no tick</div>
+        <div><span class="checkmark"></span> Your second point</div>
+        <div><span class="checkmark"></span> Your third point</div>
+        <div><span class="checkmark"></span> Your fourth point</div>
+      </div>
+      -->
+
     </div>
 
 
