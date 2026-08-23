@@ -192,6 +192,18 @@ body {
   color: #ffffff;
   margin-top: 0;
   font-size: 22px;letter-spacing:2px;
+
+  /* shrinks the heading to the width of its own words, so the
+     underline below only appears when the visitor is actually
+     over the text - not over the empty space beside it        */
+  width: fit-content;
+}
+
+/* the underline that appears on hover */
+.card h3:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
 }
 
 /* The slow green shine that drifts across each box.
