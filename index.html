@@ -274,14 +274,16 @@ body {
     to   { background-position: -50% 0; }
 }
 
-/* Breathing room inside each ad box.
-   First number is the space above and below the text, second is
-   the space left and right. Raise the first number to open the
-   boxes up further, lower it to tighten them.
-   It was 4px above and below before.                           */
+/* The space INSIDE each ad box is set by the padding on
+   .diamond-line2 above (4px above and below, 7px either side).
+   If you ever want the boxes roomier inside, uncomment the rule
+   below and change the first number.
+
 .cards .card {
   padding: 16px 7px;
 }
+
+*/
 
 /* A lone box on the final row gets centred rather than stranded */
 .cards .card:last-child:nth-child(odd) {
