@@ -176,7 +176,14 @@ body {
 .cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
+
+  /* The space BETWEEN the ad boxes.
+     First number = the gap above and below each box (between rows).
+     Second number = the gap left and right (between the columns).
+     Raise the first number to spread the rows further apart.
+     It was 18px both ways before.                                 */
+  gap: 34px 18px;
+
   margin-top: 38px;
 }
 
@@ -211,11 +218,18 @@ body {
   margin-bottom: 0;
 }
 
-/* The ad titles stay underlined all the time.
-   Listed twice so it works whether the title has a link on it
-   or is just plain text.                                      */
-.card h3,
-.card h3 a {
+/* The heading itself is NOT underlined - that would drag the
+   line under the icon too. The icon sits outside the link, and
+   only the link (the words) carries the underline.            */
+.card h3 {
+  text-decoration: none;
+}
+
+/* The ad titles stay underlined all the time. If you add a title
+   with no link, wrap the words in <span class="t"> instead and
+   it will still be underlined.                                 */
+.card h3 a,
+.card h3 .t {
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 6px;
@@ -372,29 +386,29 @@ body {
     <!-- ---------------- COPY FROM HERE ---------------- -->
     <!-- Ad 1 -->
     <div class="card diamond-line2">
-      <h3><a href="https://clk247.com/the-click-generator-2" target="_blank" rel="noopener">🖱 The Click Generator</a></h3>
+      <h3>🖱 <a href="https://clk247.com/the-click-generator-2" target="_blank" rel="noopener">The Click Generator</a></h3>
       This is a test to check the distance between the title and the description.
     </div>
     <!-- ---------------- COPY TO HERE ---------------- -->
 
     <!-- Ad 2 -->
     <div class="card diamond-line2">
-      <h3><a href="https://warriorplus.com/o2/a/rjn7b1/0" target="_blank" rel="noopener">⚡ The Click Engine</a></h3>
+      <h3>⚡ <a href="https://warriorplus.com/o2/a/rjn7b1/0" target="_blank" rel="noopener">The Click Engine</a></h3>
     </div>
 
     <!-- Ad 3 -->
     <div class="card diamond-line2">
-      <h3><a href="https://warriorplus.com/o2/a/fldj562/0" target="_blank" rel="noopener">💥 The Click Flood Rotator</a></h3>
+      <h3>💥 <a href="https://warriorplus.com/o2/a/fldj562/0" target="_blank" rel="noopener">The Click Flood Rotator</a></h3>
     </div>
 
     <!-- Ad 4 -->
     <div class="card diamond-line2">
-      <h3><a href="https://warriorplus.com/o2/a/htqg3tm/0" target="_blank" rel="noopener">👥 Ez Clix Club</a></h3>
+      <h3>👥 <a href="https://warriorplus.com/o2/a/htqg3tm/0" target="_blank" rel="noopener">Ez Clix Club</a></h3>
     </div>
 
     <!-- Ad 5 -->
     <div class="card diamond-line2">
-      <h3><a href="https://warriorplus.com/o2/a/ssjh1kd/0" target="_blank" rel="noopener">🚦 Auto Traffic Wave</a></h3>
+      <h3>🚦 <a href="https://warriorplus.com/o2/a/ssjh1kd/0" target="_blank" rel="noopener">Auto Traffic Wave</a></h3>
     </div>
 
     <!-- Ad 6 - empty for now, waiting on your sixth ad.
@@ -402,7 +416,7 @@ body {
          way as the ones above.                                  -->
     <div class="card diamond-line2">
         
-        <h3><a href="https://warriorplus.com/o2/a/ssjh1kd/0" target="_blank" rel="noopener">🚦 Test Title</a></h3>
+        <h3>🚦 <a href="https://warriorplus.com/o2/a/ssjh1kd/0" target="_blank" rel="noopener">Test Title</a></h3>
         Testing Ad 6 for space between title and descrption
     </div>
 
