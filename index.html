@@ -41,10 +41,30 @@ body {
 
 
 /* ============================================================
+   THE TOP ROW - your text on the left, the banner box on the
+   right, exactly as the original was laid out.
+   The right column is 410px wide, same as the original.
+   ============================================================ */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 410px;
+  gap: 34px;
+  align-items: center;
+}
+
+/* Your text on the left. Plain and readable - tell me if you
+   want it styled up and I'll do it.                          */
+.hero-text {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #fff;
+}
+
+
+/* ============================================================
    THE BANNER BOX - this was the "Create Your Account" box.
    Same dark gradient inside, same green border, same green
-   glow around it. Emptied out and widened to the full page so
-   a large banner has room to breathe.
+   glow around it, same place on the page. Just emptied out.
    ============================================================ */
 .banner-card {
   background: linear-gradient(180deg, #111, #050505);
@@ -54,10 +74,10 @@ body {
   box-shadow: 0 0 35px rgba(126,255,0,.35);
   position: relative;
   overflow: hidden;
-  margin-top: 25px;
 
   /* Holds the box open at a decent size while it is still
-     empty. Once your banner is in, the box grows to fit it. */
+     empty. Once your banner is in, the box grows to fit it.
+     Change this one number if you want it taller or shorter. */
   min-height: 260px;
   display: flex;
   align-items: center;
@@ -169,6 +189,11 @@ body {
     background: #020202;
   }
 
+  /* text on top, banner box underneath - same as the original */
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
   .cards {
     grid-template-columns: 1fr;
   }
@@ -193,16 +218,32 @@ body {
 
 <div class="page">
 
-  <!-- ============================================================
-       YOUR LARGE BANNER GOES IN HERE.
-       Replace this comment with your banner, for example:
+  <div class="hero">
 
-           <a href="https://your-link-here.com">
-             <img src="my-banner.jpg" alt="">
-           </a>
+    <!-- ============================================================
+         YOUR TEXT GOES IN HERE (the left hand side).
+         Replace this comment with whatever you want, for example:
 
-       ============================================================ -->
-  <div class="banner-card" id="banner">
+             <h1>Your headline</h1>
+             <p>Your paragraph of text.</p>
+
+         ============================================================ -->
+    <div class="hero-text">
+    </div>
+
+
+    <!-- ============================================================
+         YOUR LARGE BANNER GOES IN HERE (the right hand box).
+         Replace this comment with your banner, for example:
+
+             <a href="https://your-link-here.com">
+               <img src="my-banner.jpg" alt="">
+             </a>
+
+         ============================================================ -->
+    <div class="banner-card" id="banner">
+    </div>
+
   </div>
 
 

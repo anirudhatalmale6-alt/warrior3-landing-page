@@ -13,7 +13,8 @@ Upload `index.html` to your web host. That's it.
 Everything you need to change is marked with a comment block inside the file:
 
 - **Page title** — near the top, in the `<title>` tag.
-- **Your banner** — the `banner-card` box. Drop your banner image in there.
+- **Your text** — the `hero-text` box on the left of the top row.
+- **Your banner** — the `banner-card` box on the right of the top row.
 - **Your text ads** — the `cards` block. To add another ad box, copy the
   section marked `COPY FROM HERE` / `COPY TO HERE` and paste it in.
 
